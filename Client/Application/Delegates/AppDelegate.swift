@@ -188,7 +188,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UIViewControllerRestorati
         browserViewController.restorationClass = AppDelegate.self
 
         let navigationController = UINavigationController(rootViewController: browserViewController)
-        navigationController.delegate = self
         navigationController.isNavigationBarHidden = true
         navigationController.edgesForExtendedLayout = UIRectEdge(rawValue: 0)
         rootViewController = navigationController
@@ -678,20 +677,6 @@ extension AppDelegate {
         let handledShortCutItem = QuickActions.sharedInstance.handleShortCutItem(shortcutItem, withBrowserViewController: browserViewController)
 
         completionHandler(handledShortCutItem)
-    }
-}
-
-// MARK: - Root View Controller Animations
-extension AppDelegate: UINavigationControllerDelegate {
-    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        switch operation {
-        case .push:
-            return BrowserToTrayAnimator()
-        case .pop:
-            return TrayToBrowserAnimator()
-        default:
-            return nil
-        }
     }
 }
 
