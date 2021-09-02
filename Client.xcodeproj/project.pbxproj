@@ -884,6 +884,19 @@
 		CA9A233426B97B4300923D70 /* PlaylistMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9A233326B97B4300923D70 /* PlaylistMenuButton.swift */; };
 		CA9A234126B97B8400923D70 /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9A234026B97B8400923D70 /* MenuButton.swift */; };
 		CAA10597266FE94700A0372D /* RecentSearchQRCodeScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA1058B266FE94700A0372D /* RecentSearchQRCodeScannerController.swift */; };
+		CAADEF9226E10D300020DC4C /* 404.html in Resources */ = {isa = PBXBuildFile; fileRef = CAADEF9126E10D300020DC4C /* 404.html */; };
+		CAADEF9426E10E6D0020DC4C /* NetworkError.html in Resources */ = {isa = PBXBuildFile; fileRef = CAADEF9326E10E6D0020DC4C /* NetworkError.html */; };
+		CAADEF9626E10EBA0020DC4C /* InterstitialPageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEF9526E10EBA0020DC4C /* InterstitialPageHandler.swift */; };
+		CAADEF9826E133480020DC4C /* TooManyRedirects.html in Resources */ = {isa = PBXBuildFile; fileRef = CAADEF9726E133480020DC4C /* TooManyRedirects.html */; };
+		CAADEF9A26E1339F0020DC4C /* CertificateError.html in Resources */ = {isa = PBXBuildFile; fileRef = CAADEF9926E1339F0020DC4C /* CertificateError.html */; };
+		CAADEF9C26E133D20020DC4C /* ConnectionNotPrivate.html in Resources */ = {isa = PBXBuildFile; fileRef = CAADEF9B26E133D20020DC4C /* ConnectionNotPrivate.html */; };
+		CAADEF9E26E136FE0020DC4C /* InterstitialStyles.css in Resources */ = {isa = PBXBuildFile; fileRef = CAADEF9D26E136FE0020DC4C /* InterstitialStyles.css */; };
+		CAADEFA126E138930020DC4C /* 404.svg in Resources */ = {isa = PBXBuildFile; fileRef = CAADEFA026E138930020DC4C /* 404.svg */; };
+		CAADEFA326E138C30020DC4C /* NetworkError.svg in Resources */ = {isa = PBXBuildFile; fileRef = CAADEFA226E138C30020DC4C /* NetworkError.svg */; };
+		CAADEFA526E139DD0020DC4C /* clock.svg in Resources */ = {isa = PBXBuildFile; fileRef = CAADEFA426E139DD0020DC4C /* clock.svg */; };
+		CAADEFA726E13A030020DC4C /* globe.svg in Resources */ = {isa = PBXBuildFile; fileRef = CAADEFA626E13A030020DC4C /* globe.svg */; };
+		CAADEFA926E13A2B0020DC4C /* info.svg in Resources */ = {isa = PBXBuildFile; fileRef = CAADEFA826E13A2B0020DC4C /* info.svg */; };
+		CAADEFAB26E13A540020DC4C /* warning.svg in Resources */ = {isa = PBXBuildFile; fileRef = CAADEFAA26E13A540020DC4C /* warning.svg */; };
 		CAB127632639F37C00BBFC75 /* RecentSearches.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB127622639F37C00BBFC75 /* RecentSearches.swift */; };
 		CAB127652639FB7000BBFC75 /* RecentSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB127642639FB7000BBFC75 /* RecentSearchCell.swift */; };
 		CAB54B8626A5BFA800F08BF3 /* PlaylistURLBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB54B8526A5BFA800F08BF3 /* PlaylistURLBarButton.swift */; };
@@ -2584,6 +2597,19 @@
 		CA9A233326B97B4300923D70 /* PlaylistMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistMenuButton.swift; sourceTree = "<group>"; };
 		CA9A234026B97B8400923D70 /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
 		CAA1058B266FE94700A0372D /* RecentSearchQRCodeScannerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentSearchQRCodeScannerController.swift; sourceTree = "<group>"; };
+		CAADEF9126E10D300020DC4C /* 404.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = 404.html; sourceTree = "<group>"; };
+		CAADEF9326E10E6D0020DC4C /* NetworkError.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = NetworkError.html; sourceTree = "<group>"; };
+		CAADEF9526E10EBA0020DC4C /* InterstitialPageHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstitialPageHandler.swift; sourceTree = "<group>"; };
+		CAADEF9726E133480020DC4C /* TooManyRedirects.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = TooManyRedirects.html; sourceTree = "<group>"; };
+		CAADEF9926E1339F0020DC4C /* CertificateError.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = CertificateError.html; sourceTree = "<group>"; };
+		CAADEF9B26E133D20020DC4C /* ConnectionNotPrivate.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ConnectionNotPrivate.html; sourceTree = "<group>"; };
+		CAADEF9D26E136FE0020DC4C /* InterstitialStyles.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = InterstitialStyles.css; sourceTree = "<group>"; };
+		CAADEFA026E138930020DC4C /* 404.svg */ = {isa = PBXFileReference; lastKnownFileType = text; path = 404.svg; sourceTree = "<group>"; };
+		CAADEFA226E138C30020DC4C /* NetworkError.svg */ = {isa = PBXFileReference; lastKnownFileType = text; path = NetworkError.svg; sourceTree = "<group>"; };
+		CAADEFA426E139DD0020DC4C /* clock.svg */ = {isa = PBXFileReference; lastKnownFileType = text; path = clock.svg; sourceTree = "<group>"; };
+		CAADEFA626E13A030020DC4C /* globe.svg */ = {isa = PBXFileReference; lastKnownFileType = text; path = globe.svg; sourceTree = "<group>"; };
+		CAADEFA826E13A2B0020DC4C /* info.svg */ = {isa = PBXFileReference; lastKnownFileType = text; path = info.svg; sourceTree = "<group>"; };
+		CAADEFAA26E13A540020DC4C /* warning.svg */ = {isa = PBXFileReference; lastKnownFileType = text; path = warning.svg; sourceTree = "<group>"; };
 		CAB127622639F37C00BBFC75 /* RecentSearches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSearches.swift; sourceTree = "<group>"; };
 		CAB127642639FB7000BBFC75 /* RecentSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSearchCell.swift; sourceTree = "<group>"; };
 		CAB54B8526A5BFA800F08BF3 /* PlaylistURLBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistURLBarButton.swift; sourceTree = "<group>"; };
@@ -5046,6 +5072,34 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		CAADEF8526E10D110020DC4C /* Interstitial Pages */ = {
+			isa = PBXGroup;
+			children = (
+				CAADEF9F26E138840020DC4C /* Images */,
+				CAADEF9D26E136FE0020DC4C /* InterstitialStyles.css */,
+				CAADEF9126E10D300020DC4C /* 404.html */,
+				CAADEF9326E10E6D0020DC4C /* NetworkError.html */,
+				CAADEF9726E133480020DC4C /* TooManyRedirects.html */,
+				CAADEF9926E1339F0020DC4C /* CertificateError.html */,
+				CAADEF9B26E133D20020DC4C /* ConnectionNotPrivate.html */,
+				CAADEF9526E10EBA0020DC4C /* InterstitialPageHandler.swift */,
+			);
+			path = "Interstitial Pages";
+			sourceTree = "<group>";
+		};
+		CAADEF9F26E138840020DC4C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				CAADEFA026E138930020DC4C /* 404.svg */,
+				CAADEFA226E138C30020DC4C /* NetworkError.svg */,
+				CAADEFA426E139DD0020DC4C /* clock.svg */,
+				CAADEFA626E13A030020DC4C /* globe.svg */,
+				CAADEFA826E13A2B0020DC4C /* info.svg */,
+				CAADEFAA26E13A540020DC4C /* warning.svg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		CAB127612639D02100BBFC75 /* Recent Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -5200,6 +5254,7 @@
 		D3A994941A368691008AD1AC /* Browser */ = {
 			isa = PBXGroup;
 			children = (
+				CAADEF8526E10D110020DC4C /* Interstitial Pages */,
 				5E5E6E3825BA03360035B6A0 /* Playlist */,
 				0A3C789423055AC80022F6D8 /* Onboarding */,
 				C6D267612137E45D00465DFA /* PrivacyProtection */,
@@ -6611,6 +6666,7 @@
 			files = (
 				F979BE2F25BCC54E009B6ACF /* AllFramesAtDocumentStart.js in Resources */,
 				4481F22F26CBD1C600658EAC /* AmazonRootCA2.cer in Resources */,
+				CAADEFA326E138C30020DC4C /* NetworkError.svg in Resources */,
 				F979BE3025BCC54E009B6ACF /* AllFramesAtDocumentEnd.js in Resources */,
 				F979BE3125BCC54E009B6ACF /* AllFramesAtDocumentStartSandboxed.js in Resources */,
 				F979BE3225BCC54E009B6ACF /* AllFramesAtDocumentEndSandboxed.js in Resources */,
@@ -6622,6 +6678,7 @@
 				59871C1921E4D83900316590 /* block-cookies.json in Resources */,
 				0AB22A90257EADA900126ADC /* corwin-prescott_crestone.jpg in Resources */,
 				5E824A95260BCE0D00127F36 /* MainFrameAtDocumentEnd.js in Resources */,
+				CAADEF9A26E1339F0020DC4C /* CertificateError.html in Resources */,
 				3BC659491E5BA4AE006D560F /* TopSites in Resources */,
 				E4B7B77E1A793CF20022C5E0 /* FiraSans-SemiBold.ttf in Resources */,
 				0AB22A93257EADA900126ADC /* corwin-prescott_canyon.jpg in Resources */,
@@ -6631,8 +6688,10 @@
 				0AB22A94257EADA900126ADC /* spencer-moore_ocean.jpg in Resources */,
 				0A5E04F923FEADA800E5A3E9 /* LaunchScreen.storyboard in Resources */,
 				0AB22A8A257EADA900126ADC /* corwin-prescott_olympic.jpg in Resources */,
+				CAADEFA726E13A030020DC4C /* globe.svg in Resources */,
 				0AB22A8F257EADA900126ADC /* su-san-lee.jpg in Resources */,
 				0AE50854261C63D70099C6A3 /* BraveSearchHelper.js in Resources */,
+				CAADEFAB26E13A540020DC4C /* warning.svg in Resources */,
 				5DB474F1237F4CC9007B7652 /* ntp-data.json in Resources */,
 				595E0EDB21CAD97C00813D49 /* CookieControl.js in Resources */,
 				0A0D3D3C21A4BE6400BEE65B /* adblock-list.txt in Resources */,
@@ -6673,16 +6732,22 @@
 				0AB22A8D257EADA900126ADC /* alex-plesovskich.jpg in Resources */,
 				E4B7B77D1A793CF20022C5E0 /* FiraSans-Regular.ttf in Resources */,
 				4481F23A26CBD30900658EAC /* AmazonRootCA1.cer in Resources */,
+				CAADEFA126E138930020DC4C /* 404.svg in Resources */,
 				4481F23626CBD27B00658EAC /* GlobalSignRootCA_E46.cer in Resources */,
 				4422D55221BFFB7E00BF1855 /* make_unicode_casefold.py in Resources */,
 				5E4E078324A0E4D700B01720 /* YoutubeAdblock.js in Resources */,
 				E4B7B7791A793CF20022C5E0 /* FiraSans-Light.ttf in Resources */,
 				0AB22A8B257EADA900126ADC /* zane-lee.jpg in Resources */,
+				CAADEFA526E139DD0020DC4C /* clock.svg in Resources */,
+				CAADEF9C26E133D20020DC4C /* ConnectionNotPrivate.html in Resources */,
 				5E3477E922D7771700B0D5F8 /* ResourceDownloader.js in Resources */,
 				F99505FF22937E3900CC6543 /* U2F-low-level.js in Resources */,
+				CAADEF9E26E136FE0020DC4C /* InterstitialStyles.css in Resources */,
 				4481F23826CBD27B00658EAC /* GlobalSignRootCA_R6.cer in Resources */,
 				59D4161B232681080087A6E1 /* Localizable.strings in Resources */,
 				F9F8597C2533CEBC000CEB24 /* DownloadHelper.js in Resources */,
+				CAADEFA926E13A2B0020DC4C /* info.svg in Resources */,
+				CAADEF9426E10E6D0020DC4C /* NetworkError.html in Resources */,
 				0A0D3D5021A5609600BEE65B /* SafeBrowsingError.html in Resources */,
 				74821FFE1DB6D3AC00EEEA72 /* MailSchemes.plist in Resources */,
 				5EC1DDBC2356883800CA4028 /* onboarding-shields.json in Resources */,
@@ -6705,10 +6770,12 @@
 				0BA1E00E1B03FB0B007675AF /* NetError.html in Resources */,
 				5DE5250E218CE92C000DFAA6 /* block-images.json in Resources */,
 				E4A961381AC06FA50069AD6F /* ReaderViewLoading.html in Resources */,
+				CAADEF9226E10D300020DC4C /* 404.html in Resources */,
 				4481F23026CBD1C600658EAC /* SFSRootCAG2.cer in Resources */,
 				4481F22E26CBD1C600658EAC /* AmazonRootCA4.cer in Resources */,
 				0AB22A8E257EADA900126ADC /* spencer-moore_lake.jpg in Resources */,
 				59C8119922D754D4005D5BBC /* BraveShared.strings in Resources */,
+				CAADEF9826E133480020DC4C /* TooManyRedirects.html in Resources */,
 				F9E0F3B4257878C1003A6A30 /* PrintHandler.js in Resources */,
 				5E824A96260BCE0D00127F36 /* MainFrameAtDocumentStart.js in Resources */,
 				4481F23526CBD27B00658EAC /* GlobalSignRootCA_R5.cer in Resources */,
@@ -7272,6 +7339,7 @@
 				EB11A1062044A90E0018F749 /* ContentBlockerHelper+TabContentScript.swift in Sources */,
 				2755AB8623107DBD00F0721F /* AdsMediaReporting.swift in Sources */,
 				27036EC3256718DA004EF6B6 /* PartnerCardView.swift in Sources */,
+				CAADEF9626E10EBA0020DC4C /* InterstitialPageHandler.swift in Sources */,
 				0A39FE9C2486604D00290ABC /* GRDSubscriberCredential.m in Sources */,
 				FA9293D41D6580E100AC8D33 /* QRCodeViewController.swift in Sources */,
 				27448533245B5EC2001920B5 /* NTPDataSource.swift in Sources */,

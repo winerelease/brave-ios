@@ -573,6 +573,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UIViewControllerRestorati
         
         ReaderModeHandlers.register(server, profile: profile)
         ErrorPageHelper.register(server, certStore: profile.certStore)
+        InterstitialPageHandler.register(server)
         SafeBrowsingHandler.register(server)
         AboutHomeHandler.register(server)
         AboutLicenseHandler.register(server)
