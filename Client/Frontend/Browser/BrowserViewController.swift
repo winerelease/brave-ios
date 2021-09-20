@@ -181,7 +181,7 @@ class BrowserViewController: UIViewController {
     /// Data Source object used to determine blocking stats
     //let benchmarkBlockingDataSource = BlockingSummaryDataSource()
     var benchmarkBlockingDataSource: BlockingSummaryDataSource?
-
+    
     init(profile: Profile,
          tabManager: TabManager,
          historyAPI: BraveHistoryAPI,
