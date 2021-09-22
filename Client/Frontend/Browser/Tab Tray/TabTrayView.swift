@@ -48,16 +48,18 @@ extension TabTrayController2 {
             $0.accessibilityIdentifier = "TabTrayController.addTabButton"
             $0.tintColor = .braveLabel
             $0.contentEdgeInsets = .init(top: 0, left: 10, bottom: 0, right: 10)
+            $0.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
         }
         
         let doneButton = UIButton(type: .system).then {
             $0.setTitle(Strings.done, for: .normal)
-            $0.titleLabel?.font = .systemFont(ofSize: 17.0, weight: .medium)
+            $0.titleLabel?.font = .preferredFont(forTextStyle: .body)
+            $0.titleLabel?.adjustsFontForContentSizeCategory = true
             $0.titleLabel?.textAlignment = .right
+            $0.titleLabel?.adjustsFontSizeToFitWidth = true
             $0.accessibilityLabel = Strings.done
             $0.accessibilityIdentifier = "TabTrayController.doneButton"
             $0.tintColor = .braveLabel
-            $0.setContentHuggingPriority(.required, for: .horizontal)
             $0.snp.makeConstraints {
                 $0.width.equalTo(100)
             }
@@ -65,11 +67,12 @@ extension TabTrayController2 {
         
         // TODO: DISABLE IF PBM
         let privateModeButton = PrivateModeButton().then {
-            $0.titleLabel?.font = .systemFont(ofSize: 17.0, weight: .medium)
+            $0.titleLabel?.font = .preferredFont(forTextStyle: .body)
+            $0.titleLabel?.adjustsFontForContentSizeCategory = true
+            $0.titleLabel?.adjustsFontSizeToFitWidth = true
             $0.titleLabel?.textAlignment = .left
             $0.setTitle(Strings.private, for: .normal)
             $0.tintColor = .braveLabel
-            $0.setContentHuggingPriority(.required, for: .horizontal)
             $0.snp.makeConstraints {
                 $0.width.equalTo(100)
             }
