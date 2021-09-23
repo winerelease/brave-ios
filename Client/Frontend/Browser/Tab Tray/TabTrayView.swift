@@ -96,6 +96,8 @@ extension TabTrayController2 {
                     .view(doneButton)
                 )
                 $0.setContentCompressionResistancePriority(.defaultHigh, for: .vertical)
+                $0.layoutMargins = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+                $0.isLayoutMarginsRelativeArrangement = true
             }
             
             let stackView = UIStackView().then {
