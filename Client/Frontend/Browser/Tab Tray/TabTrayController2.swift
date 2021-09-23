@@ -7,7 +7,9 @@ import UIKit
 import Shared
 import BraveShared
 
-protocol TabTrayDelegate2: AnyObject {
+protocol TabTrayDelegate: AnyObject {
+    /// Notifies the delegate that order of tabs on tab tray has changed.
+    /// This info can be used to update UI in other place, for example update order of tabs in tabs bar.
     func tabOrderChanged()
 }
 
@@ -29,26 +31,13 @@ class TabTrayController2: UIViewController {
     typealias Snapshot = NSDiffableDataSourceSnapshot<TabTraySection, Tab>
     
     let tabManager: TabManager
-    weak var delegate: TabTrayDelegate2?
+    weak var delegate: TabTrayDelegate?
     
     private(set) lazy var dataSource =
-        DataSource(collectionView: tabTrayView.collectionView,
-                   cellProvider: { [weak self] collectionView, indexPath, tab -> UICollectionViewCell? in
-                    guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TabCell.identifier, for: indexPath) as? TabCell else { return UICollectionViewCell() }
-                    
-                    cell.configure(with: tab)
-                    
-                    if tab == self?.tabManager.selectedTab {
-                        cell.setTabSelected(tab)
-                    }
-                    
-                    cell.closedTab = { [weak self] tab in
-                        self?.remove(tab: tab)
-                        UIAccessibility.post(notification: .announcement, argument: Strings.tabTrayClosingTabAccessibilityNotificationText)
-                    }
-                    
-                    return cell
-                   })
+    DataSource(collectionView: tabTrayView.collectionView,
+               cellProvider: { [weak self] collectionView, indexPath, tab -> UICollectionViewCell? in
+        self?.cellProvider(collectionView: collectionView, indexPath: indexPath, tab: tab)
+    })
     
     private(set) var privateMode: Bool = false {
         didSet {
@@ -96,6 +85,8 @@ class TabTrayController2: UIViewController {
         }
     }
     
+    // MARK: Snapshot handling
+    
     private func applySnapshot() {
         var snapshot = Snapshot()
         snapshot.appendSections([.main])
@@ -109,6 +100,29 @@ class TabTrayController2: UIViewController {
         snapshot.reloadSections([.main])
         dataSource.apply(snapshot, animatingDifferences: false)
     }
+    
+    private func cellProvider(collectionView: UICollectionView,
+                              indexPath: IndexPath,
+                              tab: Tab) -> UICollectionViewCell? {
+        guard let cell = collectionView
+                .dequeueReusableCell(withReuseIdentifier: TabCell.identifier,
+                                     for: indexPath) as? TabCell else { return UICollectionViewCell() }
+        
+        cell.configure(with: tab)
+        
+        if tab == tabManager.selectedTab {
+            cell.setTabSelected(tab)
+        }
+        
+        cell.closedTab = { [weak self] tab in
+            self?.remove(tab: tab)
+            UIAccessibility.post(notification: .announcement, argument: Strings.tabTrayClosingTabAccessibilityNotificationText)
+        }
+        
+        return cell
+    }
+    
+    // MARK: - Actions
     
     @objc func doneAction() {
         dismiss(animated: true)
@@ -159,6 +173,7 @@ class TabTrayController2: UIViewController {
     }
 }
 
+// MARK: - UICollectionViewDelegate
 extension TabTrayController2: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let tab = dataSource.itemIdentifier(for: indexPath) else { return }
@@ -167,6 +182,7 @@ extension TabTrayController2: UICollectionViewDelegate {
     }
 }
 
+// MARK: - TabManagerDelegate
 extension TabTrayController2: TabManagerDelegate {
     func tabManager(_ tabManager: TabManager, didAddTab tab: Tab) {
         applySnapshot()
