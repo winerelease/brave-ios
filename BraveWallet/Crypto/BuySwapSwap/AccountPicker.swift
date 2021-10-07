@@ -5,6 +5,7 @@
 
 import SwiftUI
 import BraveCore
+import struct Shared.Strings
 
 struct AccountPicker: View {
   @ObservedObject var keyringStore: KeyringStore
@@ -100,7 +101,7 @@ struct AccountPicker: View {
     NavigationView {
       List {
         Section(
-          header: WalletListHeaderView(title: Text("Accounts"))
+          header: WalletListHeaderView(title: Text(Strings.Wallet.accountsPageTitle))
         ) {
           ForEach(keyringStore.keyring.accountInfos) { account in
             Button(action: {
@@ -113,12 +114,12 @@ struct AccountPicker: View {
         }
         .listRowBackground(Color(.secondaryBraveGroupedBackground))
       }
-      .navigationTitle("Select Account")
+      .navigationTitle(Strings.Wallet.selectAccountTitle)
       .navigationBarTitleDisplayMode(.inline)
       .toolbar {
         ToolbarItemGroup(placement: .cancellationAction) {
           Button(action: { isPresentingPicker = false }) {
-            Text("Cancel")
+            Text(Strings.CancelString)
               .foregroundColor(Color(.braveOrange))
           }
         }
